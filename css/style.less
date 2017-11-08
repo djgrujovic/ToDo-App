@@ -1,0 +1,141 @@
+/* VARIABLES */
+// White background and some text
+@white: #FFF;
+// Sections backgrounds & Price buttons
+// Orange for section, price buttons and details
+@orange: #F4511E;
+// Blue for section
+@blue: #01579B;
+
+// Dimensions for HEADER
+.dimensions(@height, @width) {
+  width: @width;
+  height: @height;}
+
+@media only screen and (min-width: 1200px) and (max-width: 5000px){
+/* *** GENERAL SETTINGS *** */
+  html, body{
+    margin: 0;
+    padding: 0;}
+
+  // GENERAL STYLE
+  h1{
+    text-align: center;
+    color: @blue;}
+  button{
+    display: none;}
+
+  nav{
+    .dimensions(100px, 100%);
+    background-color: #333;
+    text-align: center;}
+
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li{
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 30px;
+      &.active {
+        background-color: rgba(225, 225, 225, 0.3);}
+      a{
+        font-size: 18px;
+        color: #00c6c6;
+        text-decoration: none;}
+    }
+  }
+  .text{
+    .dimensions(250px, 40%);
+    margin: auto;
+    margin-top: 100px;
+    padding: 50px;
+    border: 0.5px solid #333;
+    box-shadow: 0 0 10px #333;
+    box-sizing: border-box;}
+  .remove{
+    display: none;}
+
+  //Panel for testing jQuery
+  .jquery{
+    .dimensions(300px, 40%);
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 30px;
+    border: 0.5px solid #333;
+    box-shadow: 0 0 10px #333;
+    box-sizing: border-box;
+    ul{
+      .dimensions(auto, 130px);
+      display: none;
+      margin: 0;
+      padding: 0;
+      box-shadow: 0 0 15px #333;
+      text-align: center;
+      li{
+        display: block;
+        margin: 0;
+        padding: 15px 30px;
+        border-bottom: 1px solid #777;
+        &:last-child{
+          border-bottom: none;
+        }
+        &:hover{
+          background-color: @blue;}
+      }
+    }
+
+  }
+  //Menu button position and style
+  .btn{
+    margin-bottom: 10px;
+    display: block;}
+
+}
+
+@media only screen and (max-width: 768px){
+/* *** GENERAL SETTINGS *** */
+  html, body{
+    margin: 0;
+    padding: 0;}
+
+  // GENERAL STYLE
+  h1{
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    color: #333;}
+  button{
+    float: right;
+    margin: 10px 20px;
+    padding: 10px 30px;}
+
+  ul{
+    position: absolute;
+    top: 130px;
+    right: 0;
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    list-style-type: none;
+    li{
+      padding: 20px 20px;
+      text-align: center;
+      &:hover{
+        background-color: rgba(225, 225, 225, 0.3);}
+    }
+    li a{
+      text-decoration: none;
+      font-size: 18px;
+      color: #00c6c6;
+      &:hover{
+        color: white;
+        font-weight: bold;}
+    }
+  }
+
+}
